@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	font-family: 'Roboto Mono', monospace;
+	font-family: 'Rubik', sans-serif;
+	
+}
+
+
+.container-fluid{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	align-content: center;
+}
+
+#logo{
+	width: 100px;
+}
+
+table{
+    width: 100%;
+    border: 2px solid black;
+	border-radius: 15px;
+	margin-top: 35px;
+}
+
+
+
+tr:hover{
+	background-color: #d3d3d3;
+	}
+
+h1{
+	font-size: 21px;
+	font-weight: bold;
+}
+
+h3{
+	margin-top: 15px;
+}
+
+#button{
+	border: 1px solid black;
+	border-radius: 15px;
+	background-color: lightblue;
+	padding: 10px;
+}
+
+#delete{
+	background-color: blue;
+	padding: 5px;
+	border-radius: 5px;
+}
+
+#change{
+	background-color: red;
+	padding: 5px;
+	border-radius: 5px;
+}
+
+#event{
+	display: flex;
+	flex-direction: column;
+}
+
+#button2{
+	background-color: blue;
+	padding:5px;
+	font-weight: bold;
+	border-radius: 10px;
+}
+
+
+
+
+
+
