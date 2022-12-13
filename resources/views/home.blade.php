@@ -2,6 +2,6 @@
 
 @section('content')
 <h1>welkom</h1>
-<img src="img/Monkey.png" alt="">
+<img src="img/Monkey.png" alt="" id="home">
 
 @endsection

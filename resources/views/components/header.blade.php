@@ -15,9 +15,7 @@
         <li class="nav-item">
           <a class="nav-link" href="/contact">Contact</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/admin">Admin</a>
-        </li>
+        
        
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -27,7 +25,9 @@
             
             <li><a class="dropdown-item" href="http://ticketsyteem.test/event_list">EvenementenLijst</a></li>
             @if (Auth::user())
-           
+            @if (Auth::user()->is_admin)
+              <li><a class ="dropdown-item" href="/admin">Admin</a></li>
+            @endif
               <li><a class="dropdown-item" href="http://ticketsyteem.test/template">Tickets</a></li>
               <li><a class="dropdown-item" href="http://ticketsyteem.test/event">Events</a></li>
               <li class="dropdown-item">
