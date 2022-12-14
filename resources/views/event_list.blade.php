@@ -13,7 +13,7 @@
                     
                     <td>
                         <H1>{{$event->name}}</H1>
-                        <img src="{{$event->photo}}" alt="foto">
+                        <!-- <img src="{{$event->photo}}" alt="foto" class="event"> -->
                         <h2>{{$event->event_start}}</h2>
                         <h2>{{$event->event_end}}</h2>
                         <h2>{{$event->available_tickets}}</h2>
