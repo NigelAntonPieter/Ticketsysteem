@@ -67,8 +67,6 @@ class EventsController extends Controller
 
     public function event_list(){
         $event = Event::all();
-
-        dd("Hallo?");
         
         return view('event_list' , [
             'events' =>$event
