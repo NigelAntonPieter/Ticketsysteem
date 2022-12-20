@@ -34,9 +34,9 @@ Route::get('/dashboard', function () {
 Route::get('/template', [TicketsController::class, 'viewtemplate'])->middleware(['auth']);
 Route::post('/createTickets', [TicketsController::class, 'createTickets'])->name('createTicket');
 
+Route::get('/buy_tickets', [TicketsController::class, 'viewbuy']);
 
 
-// Route::post('/admin/create_tickets', [TicketsController::class, 'createTickets'])->name('createTicket');
 
 Route::post('/create_events', [EventsController::class, 'createEvents'])->name('createEvent');
 

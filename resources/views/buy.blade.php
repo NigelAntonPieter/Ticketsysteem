@@ -1,10 +1,9 @@
 @extends('layouts.base')
 
 @section('content')
-   
-    <table class="table">
+<table class="table">
         <thead>
-            <th>Events</th>
+            <th>Ticket van evenement</th>
         </thead>
         <tbody>
             <div class="row row-cols-4">
@@ -14,13 +13,12 @@
                         <img src="{{$event->photo}}" alt="foto" class="event_foto">
                         <div class="card-body">
                             <h5 class="card-title">{{$event->name}}</h5>
-                            <p class="card-text">{{$event->description}}</p>
+                            
                         </div>
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item">{{date_format(date_create($event->event_start), "d/M/Y")}} <T>
-                            <M></M> {{date_format(date_create($event->event_end), "d/M/Y")}}</li>
+                            
                             <li class="list-group-item">{{$event->available_tickets}}</li>
-                            <li class="list-group-item">{{$event->location}}</li>
+                            
                             <li class="list-group-item">€{{$event->price}}</li>
                             
                         </ul>
@@ -32,7 +30,5 @@
             </div>
         </tbody>
     </table>
-
-
 
 @endsection

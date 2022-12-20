@@ -9,7 +9,8 @@
 
 body{
 	font-family: 'Roboto Mono', monospace;
-	font-family: 'Rubik', sans-serif;
+	
+	
 	
 }
 
@@ -35,7 +36,7 @@ table{
 
 
 tr:hover{
-	background-color: #d3d3d3;
+	background-color: lightblue;
 	}
 
 h1{
@@ -78,7 +79,9 @@ h3{
 	border-radius: 10px;
 }
 
-
+.container{
+	margin-left: 50px;
+}
 
 
 

@@ -11,6 +11,10 @@ class TicketsController extends Controller
         return view('ticket');
     }
 
+    public function viewbuy(){
+        return view ('buy');
+    }
+
     public function createTickets(Request $request){
         $request;
         $newTicket = new Ticket();

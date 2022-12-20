@@ -27,9 +27,10 @@
             @if (Auth::user())
             @if (Auth::user()->is_admin)
               <li><a class ="dropdown-item" href="/admin">Admin</a></li>
+              <li><a class="dropdown-item" href="http://ticketsyteem.test/event">Events</a></li>
             @endif
               <li><a class="dropdown-item" href="http://ticketsyteem.test/template">Tickets</a></li>
-              <li><a class="dropdown-item" href="http://ticketsyteem.test/event">Events</a></li>
+              
               <li class="dropdown-item">
                 <form action="{{route('logout')}}" method="POST">
                   @csrf
