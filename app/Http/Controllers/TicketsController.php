@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Ticket;
+x
 
 class TicketsController extends Controller
 {
@@ -15,11 +16,13 @@ class TicketsController extends Controller
         return view ('buy');
     }
 
-    public function createTickets(Request $request){
+    
+
+    public function createTickets(Request $request, $event_id){
         $request;
         $newTicket = new Ticket();
         $newTicket->owner = $request->input('owner');
-        $newTicket->qr = $request->input('qr');
+        $newTicket->qr_hash = Str ::
         $newTicket->event = $request->input('event');
         $newTicket->save();
 

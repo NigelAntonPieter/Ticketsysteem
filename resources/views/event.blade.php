@@ -10,15 +10,15 @@
   <div class="card">
     
     <div class="card-body">
-      <form name="add-blog-post-form" id="add-blog-post-form" method="post" action="{{route ('createEvent')}}">
+      <form name="add-blog-post-form" id="add-blog-post-form" method="post" action="{{route ('createEvent')}}" enctype="multipart/form-data">
        @csrf
         <div class="form-group">
           <label for="name">Name</label>
           <input type="text" id="name" name="name" class="form-control" required="">
         </div>
         <div class="form-group">
-          <label for="photo">Foto</label>
-          <input type="text" id="photo" name="photo" class="form-control" required="">
+          <label for="image">Foto</label>
+          <input type="file" id="image" name="image" class="form-control" accept="image/jpg , image/gif, image/jpeg" >
         </div>
         <div class="form-group">
           <label for="event_start">Begin datum</label>
