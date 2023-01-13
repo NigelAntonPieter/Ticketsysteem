@@ -25,7 +25,12 @@
                             
                         </ul>
                         <div class="card-body">
-                        <a class = "bi bi-plus" href="/buy_tickets" id="button2">ticket</a>
+                        <form action="{{ Route('createTicket') }}" method="POST">
+                            @csrf
+                            <input type="hidden" id="event" name="event" value="{{$event->id}}">
+                            <button type="submit" class="btn btn-warning">Koop u ticket hier</button>
+
+                        </form>
                         </div>
                     </div>
                     @endforeach

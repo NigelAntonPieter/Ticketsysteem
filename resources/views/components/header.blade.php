@@ -3,7 +3,7 @@
 <nav class="navbar navbar-expand-lg bg-info">
   <div class="container-fluid">
     <img src="img/Monkey.gif" alt="" id="logo">
-    <a class="navbar-brand" href="{{route('home')}}">Ticketsysteem</a>
+    <a class="navbar-brand" href="{{route('home')}}">MonkeyBussines</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -23,13 +23,13 @@
           </a>
           <ul class="dropdown-menu">
             
-            <li><a class="dropdown-item" href="http://ticketsyteem.test/event_list">EvenementenLijst</a></li>
+            <li><a class="dropdown-item" href="{{ Route('event_list')}}">EvenementenLijst</a></li>
             @if (Auth::user())
             @if (Auth::user()->is_admin)
-              <li><a class ="dropdown-item" href="/admin">Admin</a></li>
-              <li><a class="dropdown-item" href="http://ticketsyteem.test/event">Events</a></li>
+              <li><a class ="dropdown-item" href="{{ Route ('admin')}}">Admin</a></li>
+              <li><a class="dropdown-item" href="{{ Route('event')}}">Events</a></li>
             @endif
-              <li><a class="dropdown-item" href="http://ticketsyteem.test/template">Tickets</a></li>
+              <li><a class="dropdown-item" href="{{ Route('view-tickets')}}">Tickets</a></li>
               
               <li class="dropdown-item">
                 <form action="{{route('logout')}}" method="POST">

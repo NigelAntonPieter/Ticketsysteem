@@ -31,16 +31,17 @@ Route::get('/dashboard', function () {
 
 
 
-Route::get('/template', [TicketsController::class, 'viewtemplate'])->middleware(['auth']);
+Route::get('/view-ticket', [TicketsController::class, 'viewTicket'])->middleware(['auth'])->name('view-tickets');
+Route::get('/tickets', [TicketsController::class, 'viewtemplate'])->middleware(['auth'])->name('ticket');
 Route::post('/createTickets', [TicketsController::class, 'createTickets'])->name('createTicket');
+Route::get('/delete-ticket/{id}', [TicketsController::class, 'delete'])->name('delete_ticket');
 
-Route::get('/buy_tickets', [TicketsController::class, 'viewbuy']);
 
 
 
 Route::post('/create_events', [EventsController::class, 'createEvents'])->name('createEvent');
 
-Route::get('/event' , [EventsController::class, 'viewEvent'])->middleware(['auth']);
+Route::get('/event' , [EventsController::class, 'viewEvent'])->middleware(['auth'])->name('event');
 
 
 
